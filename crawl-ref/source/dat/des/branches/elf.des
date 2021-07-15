@@ -1614,6 +1614,221 @@ ccc==----c
     cccccc
 ENDMAP
 
+NAME:    nicolae_elf_elemental_lessons
+TAGS:    transparent
+DEPTH:   Elf
+KITEM:   P = randbook disc:fire slevels:5
+KITEM:   Q = randbook disc:earth slevels:5
+KITEM:   R = randbook disc:ice slevels:5
+KITEM:   S = randbook disc:air slevels:5
+KMONS:   D = deep elf zephyrmancer / deep elf pyromancer
+KMONS:   E = deep elf elementalist
+# A small chance of an elementalist transfer student:
+KMONS:   H = spriggan air mage / deep troll earth mage / merfolk aquamancer / \
+             salamander tyrant
+KMONS:   P = fire elemental
+KMONS:   Q = earth elemental
+KMONS:   R = water elemental
+KMONS:   S = air elemental
+SHUFFLE: PQRS
+SUBST:   D = D. H:2
+MAP
+    .....
+ccccnc+cncccc
+ccc.......ccc
+cP+.D.D.D.+Qc
+cnc..D.D..cnc
+@.n.D.D.D.n.@
+cnc..D.D..cnc
+cR+.......+Sc
+ccc...E...ccc
+ccccccccccccc
+ENDMAP
+
+NAME:  nicolae_elf_free_trip_to_the_abyss
+TAGS:  transparent
+DEPTH: Elf
+KMONS: D = patrolling dancing weapon ; short sword ego:distortion | \
+           falchion ego:distortion | hand axe ego:distortion | \
+           whip ego:distortion | spear ego:distortion
+KMONS: E = deep elf sorcerer / deep elf demonologist
+KMONS: S = chaos spawn / nothing
+KFEAT: E = enter_abyss
+KFEAT: - = x
+FTILE: DE'- = floor_nerves
+TILE:  - = wall_abyss
+MAP
+   ...x
+   ....x
+  ...SS.x
+....S'''-x
+...S'''D-x
+..S'''''-x
+x.S'''E--x
+ x.'D'--xx
+  x----xx
+   xxxxx
+ENDMAP
+
+NAME:  nicolae_elf_hall_of_bonks
+TAGS:  transparent no_monster_gen
+DEPTH: Elf
+KMONS: D = dancing weapon ; whip | club | mace | flail | morningstar | \
+           demon whip | dire flail | eveningstar | great mace | giant club | \
+           giant spiked club | any magical staff | quarterstaff
+KMONS: E = dancing weapon ; morningstar good_item | demon whip good_item | \
+           dire flail good_item | eveningstar good_item | \
+           great mace good_item | giant club good_item | \
+           giant spiked club good_item | any magical staff good_item | \
+           quarterstaff good_item
+SUBST: D = D. E:1
+MAP
+  ccccccc
+ cc.....cc
+ c.D.D.D.c
+.=..DnD..c
+.=.DnnnE.c
+.=..DnD..c
+ c.D.D.D.c
+ cc.....cc
+  ccccccc
+ENDMAP
+
+NAME:    nicolae_elf_loose_elemental_storage
+TAGS:    transparent no_trap_gen no_monster_gen no_item_gen
+DEPTH:   Elf
+KITEM:   P = staff of fire / randbook disc:fire / wand of flame /ring of fire /\
+         ring of protection from fire / any weapon ego:flaming / \
+         any armour ego:fire_resistance / scroll of immolation
+KITEM:   Q = staff of earth / randbook disc:earth / wand of digging / \
+         ring of protection / tin of tremorstones / any weapon ego:protection /\
+         any weapon ego:vorpal
+KITEM:   R = staff of cold / randbook disc:ice /wand of iceblast /ring of ice /\
+         ring of protection from cold / phial of floods / \
+         any weapon ego:freezing / any armour ego:cold_resistance
+KITEM:   S = staff of air /randbook disc:air /ring of flight /ring of evasion /\
+         condenser vane / lightning rod / any weapon ego:electrocution
+KMONS:   Pp = fire elemental
+KMONS:   Qq = earth elemental
+KMONS:   Rr = water elemental
+KMONS:   Ss = air elemental
+SHUFFLE: DE, FH, JKL, Pp/Rr, Qq/Ss
+SUBST:   p = p., q = q., r = r., s = s., DF = +, EHJ = m, KL = x
+MAP
+@...xxx...@
+.x++xxxDDx.
+.mpppLqqqE.
+.mpppKqqqE.
+xxppPJQqqxx
+xxJKLxLKJxx
+xxssSJRrrxx
+.msssKrrrF.
+.msssLrrrF.
+.x++xxxHHx.
+@...xxx...@
+ENDMAP
+
+NAME:  nicolae_elf_martial_mastery
+TAGS:  transparent 
+DEPTH: Elf
+KMONS: E = deep elf blademaster / deep elf master archer
+SUBST: T : TTT., U : UUU.
+MAP
+   xxxxx
+ xxx.T.xxx
+xx.U...U.xx
+xT...E...Tx
++.........+
++.........+
+xU...E...Ux
+xx.T...T.xx
+ xxx.U.xxx
+   xxxxx
+ENDMAP
+
+NAME:   nicolae_elf_shapeshifter_party
+TAGS:   transparent patrolling no_monster_gen
+DEPTH:  Elf
+KITEM:  p = potion of mutation / potion of lignification / wand of polymorph / \
+            randbook disc:transmutation / any potion / any wand / randbook / \
+            any good_item w:30
+KMONS:  S = shapeshifter / glowing shapeshifter w:5
+SUBST:  Z = x., z = ppFFx, E = Fx, . = S .:90
+MARKER: F = lua:fog_machine { cloud_type = "mutagenic fog", pow_min = 5, \
+        pow_max = 15, delay = 30, size = 1, walk_dist = 0, start_clouds = 0, \
+        spread_rate = 0, excl_rad = 0 }
+MAP
+    xxxxx
+   xxzpzxx
+  xxZ...Zxx
+ xxZ.....Zxx
+xxZ.......Zxx
+xZ....E....Zx
++....EEE....+
+xZ....E....Zx
+xxZ.......Zxx
+ xxZ.....Zxx
+  xxZ...Zxx
+   xxzpzxx
+    xxxxx
+ENDMAP
+
+NAME:  nicolae_elf_theology_debate
+TAGS:  transparent
+DEPTH: Elf
+KMONS: D = deep elf knight
+KMONS: N = orc knight
+KFEAT: O = altar_beogh
+: if crawl.coinflip() then
+KMONS: E = deep elf high priest
+KMONS: O = orc high priest
+KFEAT: E = altar_vehumet / altar_makhleb / altar_sif_muna
+: else
+KMONS: E = deep elf sorcerer
+KMONS: O = orc sorcerer
+KFEAT: E = altar_lugonu
+: end
+SUBST: S = DN, D = DD., N = NN., % = %%*, * = **|
+MAP
+xxxxxxxxxxxxxxxxx
+xx...xx...xx...xx
+x..D....S....N..x
+x.DGD..SGS..NGN.x
+x..D....S....N..x
+xx...xx+++xx...xx
+xx.D.xx...xx.N.xx
+xU...Ux.S.xI...Ix
+x..E..xS.Sx..O..x
+xU...Ux...xI...Ix
+xx%*%xx...xx%*%xx
+xxxxxxx@@@xxxxxxx
+ENDMAP
+
+NAME:  nicolae_elf_vaults_five_recruitment_drive
+TAGS:  patrolling transparent no_item_gen
+DEPTH: Elf
+KITEM: 2 = $ / % / nothing w:40
+KMONS: 1 = deep elf high priest / deep elf death mage / deep elf annihilator / \
+           deep elf demonologist / deep elf sorcerer
+KMONS: 2 = vault guard / nothing w:2
+KMONS: 3 = deep elf archer / deep elf pyromancer / deep elf zephyrmancer / \
+           deep elf knight / vault sentinel w:5
+# Very important meeting, no interruptions in the main office:
+KMASK: 12*%$' = no_monster_gen
+MAP
+          x
+        xxxxx
+      xxx$x3xxx.@
+    xxx'2$x...+xx
+  xxx%''2'x.3...xxx
+xxxG*%1'2'+...3.3Gxxx
+  xxx%''2'x.3...xxx
+    xxx'2$x...+xx
+      xxx$x3xxx.@
+        xxxxx
+          x
+ENDMAP
+
 ##############################################################################
 ##############################################################################
 #
