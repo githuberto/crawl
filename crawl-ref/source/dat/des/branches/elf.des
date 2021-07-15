@@ -1757,7 +1757,7 @@ xxssSJRrrxx
 ENDMAP
 
 NAME:  nicolae_elf_martial_mastery
-TAGS:  transparent 
+TAGS:  transparent
 DEPTH: Elf
 KMONS: E = deep elf blademaster / deep elf master archer
 SUBST: T : TTT., U : UUU.
